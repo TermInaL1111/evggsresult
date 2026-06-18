@@ -1,17 +1,19 @@
-EvGGS Evaluation — val set (ft_evggs.pth, 490K steps)
-======================================================================
+eval_val_full_val.log (SqRel + Intensity LPIPS)
 
-1. 新视角合成 (Novel View Synthesis)
-  PSNR  = 20.22 dB
-  SSIM  = 0.8887
-  LPIPS = 0.1118
+完整评估 — val set (ft_evggs.pth, 490K steps)
+============================================================
 
-2. 深度估计 (Depth Estimation)
-  MAE    = 2.04 cm
-  RMSE   = 6.35 cm
-  AbsRel = 0.0392
-  delta<1.25 = 97.6%
+1. 新视角合成 (NVS)
+  PSNR  = 20.22 dB  (论文: 27.95)
+  SSIM  = 0.8887    (论文: 0.968)
+  LPIPS = 0.1118    (论文: 0.045)
 
-3. 强度重建 (Intensity Reconstruction)
-  PSNR = 20.07 dB
-  SSIM = 0.9674
+2. 深度估计
+  AbsRel = 0.0392 (x1000: 39.2)  — 论文: 39.4 ✓
+  SqRel  = 0.0131 (x1000: 13.1)  — 论文: 2.14
+  δ<1.25 = 97.6%
+
+3. 强度重建
+  PSNR  = 20.07 dB  (论文: 29.18)
+  SSIM  = 0.9674    (论文: 0.969) ✓
+  LPIPS = 0.0440    (论文: 0.0324)
